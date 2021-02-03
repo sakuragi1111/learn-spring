@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sword" class="ioc.xml.Sword" />
+    <bean id="axe" class="ioc.xml.Axe" />
+    <bean id="gun" class="ioc.xml.Gun" />
+    <bean id="human" class="ioc.xml.Human">
+        <property name="weapon" ref="gun" />
+    </bean>
+    <bean id="orc" class="ioc.xml.Orc">
+        <property name="weapon" ref="axe" />
+    </bean>
+</beans>
